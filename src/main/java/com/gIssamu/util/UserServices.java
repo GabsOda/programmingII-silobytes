@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import com.gIssamu.model.User;
 
 public class UserServices {
-    private static String filePath = "C:\\temp\\facul-class\\subdir\\programmingII\\users.dat";
+    private static String filePath = "";
 
     public static String getFilePath() {
         return filePath;
