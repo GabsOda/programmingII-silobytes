@@ -28,7 +28,7 @@ public class MenuBarController {
 
     @FXML
     public void goListUser() throws IOException{
-        App.setRoot("listUser");
+        App.setRoot("listUsers");
     }
 
     @FXML
