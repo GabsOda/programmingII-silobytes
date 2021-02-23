@@ -9,6 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
+import com.gIssamu.App;
 import com.gIssamu.model.User;
 
 public class UserServices {
@@ -47,27 +48,50 @@ public class UserServices {
         return list;
     }
 
+    public static boolean delete(User user){
+        ArrayList<User> nowList = listReader();
+        for(User auxUser : nowList){
+            if(auxUser.getLogin().equals(user.getLogin()) && 
+                auxUser.getPassword().equals(user.getPassword())){
+                nowList.remove(auxUser);
+                break;
+            }
+        }
+
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            oos.writeObject(nowList);
+            return true;
+        } catch (IOException io) {
+            System.out.println("Error delete user!");
+            return false;
+        }
+    }
+
     public static boolean loginEqualsVerification(String loginUser){
         ArrayList<User> list = listReader();
-
         for(User user : list){
             if(user.getLogin().equals(loginUser)){
                 return true;
             }
         }
-        
         return false;
     }
 
     public static boolean userLogin(String login, String password){
         ArrayList<User> list = listReader();
-
         for(User user : list){
             if(user.getLogin().equals(login) && user.getPassword().equals(password)){
                 return true; 
             }
         }
-
         return false;
+    }
+
+    public static String generateHidePassword(int lenght){
+        String hidePassword = "";
+        for(int i = 0; i < lenght; i++){
+            hidePassword += "*";
+        }
+        return hidePassword;
     }
 }

@@ -66,10 +66,7 @@ public class ListUsersController extends MenuBarController implements Initializa
         lbLoginField.setText(user.getLogin());
         
         int passwordCharacter = user.getPassword().length();
-        String hidePassword = "";
-        for(int i = 0; i < passwordCharacter; i++){
-            hidePassword += "*";
-        }
+        String hidePassword = UserServices.generateHidePassword(passwordCharacter);
 
         lbPasswordField.setText(hidePassword);
     }
