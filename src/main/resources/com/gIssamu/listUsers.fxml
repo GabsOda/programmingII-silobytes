@@ -76,7 +76,7 @@
                         <Insets bottom="10.0" left="5.0" top="5.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="15.0" />
+                        <Font size="25.0" />
                      </font>
                   </Label>
                   <ListView fx:id="lvListUsers" onMouseClicked="#onClicklvListUsersItem" />
@@ -89,7 +89,7 @@
                         <Insets bottom="10.0" left="5.0" top="5.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="15.0" />
+                        <Font size="25.0" />
                      </font>
                   </Label>
                   <Label fx:id="lbInstruction" text="-&gt; Select one user to show the details" textFill="#9f9f9f">
@@ -119,11 +119,17 @@
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
                         </Label>
                         <Label fx:id="lbPassword" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
                         </Label>
                         <Label fx:id="lbLoginField" GridPane.columnIndex="1">
                            <GridPane.margin>

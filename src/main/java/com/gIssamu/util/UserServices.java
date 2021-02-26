@@ -9,11 +9,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-import com.gIssamu.App;
 import com.gIssamu.model.User;
 
 public class UserServices {
-    private static String filePath = "C:\\temp\\facul-class\\subdir\\programmingII\\users.dat";
+    private static String filePath = "silobyte\\file\\users.dat";
 
     public static String getFilePath() {
         return filePath;
@@ -51,8 +50,7 @@ public class UserServices {
     public static boolean delete(User user){
         ArrayList<User> nowList = listReader();
         for(User auxUser : nowList){
-            if(auxUser.getLogin().equals(user.getLogin()) && 
-                auxUser.getPassword().equals(user.getPassword())){
+            if(auxUser.getLogin().equals(user.getLogin()) && auxUser.getPassword().equals(user.getPassword())){
                 nowList.remove(auxUser);
                 break;
             }
@@ -63,6 +61,34 @@ public class UserServices {
             return true;
         } catch (IOException io) {
             System.out.println("Error delete user!");
+            return false;
+        }
+    }
+
+    public static boolean update(User user, User updatedUser){
+        ArrayList<User> nowList = listReader();
+        System.out.println("updatedUser -> name: "+updatedUser.getName()+
+                " login: "+updatedUser.getLogin() +
+                " password: "+updatedUser.getPassword());
+        for(User auxUser: nowList){
+            if(auxUser.getLogin().equals(user.getLogin()) && auxUser.getPassword().equals(user.getPassword())){
+                auxUser.setName(updatedUser.getName());
+                auxUser.setLogin(updatedUser.getLogin());
+                auxUser.setPassword(updatedUser.getPassword());
+            }
+        }
+
+        for(User auxUser: nowList){
+            System.out.println("name: "+auxUser.getName()+
+                " login: "+auxUser.getLogin() +
+                " password: "+auxUser.getPassword());
+        }
+
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            oos.writeObject(nowList);
+            return true;
+        } catch (IOException io) {
+            System.out.println("Error update user!");
             return false;
         }
     }
