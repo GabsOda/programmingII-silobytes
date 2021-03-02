@@ -108,10 +108,8 @@ public class UpdateUserController extends MenuBarController implements Initializ
         boolean sucessUpdate = UserServices.update(selectedUser, updatedUser);
         if(sucessUpdate){
             lbSucessUpdate.setText("The user has been updated");
-            System.out.println(sucessUpdate);
         }else{
             lbUnSucessUpdate.setText("The user cannot be update!");
-            System.out.println(sucessUpdate);
         }
     }
 }

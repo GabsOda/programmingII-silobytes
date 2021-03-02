@@ -12,6 +12,11 @@ public class MenuBarController {
     }
 
     @FXML
+    public void backToMenu() throws IOException {
+        App.setRoot("menu");
+    }
+
+    @FXML
     public void quit(){
         System.exit(0);
     }
@@ -19,6 +24,11 @@ public class MenuBarController {
     @FXML
     public void goNewUser() throws IOException{
         App.setRoot("newUser");
+    }
+
+    @FXML
+    public void goNewUserNoLogin() throws IOException{
+        App.setRoot("newUserNoLogin");
     }
 
     @FXML
@@ -32,7 +42,17 @@ public class MenuBarController {
     }
 
     @FXML
+    public void goListUserNoLogin() throws IOException{
+        App.setRoot("listUserNoLogin");
+    }
+
+    @FXML
     public void goDeleteUser() throws IOException{
         App.setRoot("deleteUser");
+    }
+
+    @FXML
+    public void goNewProducer() throws IOException{
+        App.setRoot("newProducer");
     }
 }

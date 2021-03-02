@@ -50,25 +50,36 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.UpdateUserController">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#backToLogin" text="Back to Login" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="User">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#goNewUser" text="New" />
-            <MenuItem mnemonicParsing="false" onAction="#goUpdateUser" text="Update" />
-            <MenuItem mnemonicParsing="false" onAction="#goListUser" text="List" />
-            <MenuItem mnemonicParsing="false" onAction="#goDeleteUser" text="Delete" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
+      <MenuBar VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#backToLogin" text="Back to Login" />
+                  <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="User">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goNewUser" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#goUpdateUser" text="Update" />
+                  <MenuItem mnemonicParsing="false" onAction="#goListUser" text="List" />
+                  <MenuItem mnemonicParsing="false" onAction="#goDeleteUser" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Producer">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goNewProducer" text="New" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Silo">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
             <Label text="Update User">

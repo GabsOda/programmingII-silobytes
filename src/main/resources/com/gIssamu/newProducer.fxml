@@ -47,7 +47,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.NewUserController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.NewProducerController">
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -110,7 +110,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label text="Login" GridPane.rowIndex="1">
+                  <Label text="CPF" GridPane.rowIndex="1">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -118,7 +118,7 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Password" GridPane.rowIndex="2">
+                  <Label text="Phone" GridPane.rowIndex="2">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -130,11 +130,11 @@
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin></TextField>
-                  <TextField fx:id="tfLogin" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="tfCpf" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin></TextField>
-                  <TextField fx:id="tfPassword" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <TextField fx:id="tfPhone" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin></TextField>
@@ -147,10 +147,10 @@
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ButtonBar>
-                  <Label fx:id="lbUserVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="lbCpfVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <Label fx:id="lbSaveNewUser" textFill="#00a634">
+            <Label fx:id="lbSaveNewProducer" textFill="#00a634">
                <font>
                   <Font size="15.0" />
                </font>

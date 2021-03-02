@@ -60,16 +60,16 @@
             <MenuItem mnemonicParsing="false" onAction="#goDeleteUser" text="Delete" />
           </items>
         </Menu>
-            <Menu mnemonicParsing="false" text="Producer">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Silo">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
+        <Menu mnemonicParsing="false" text="Producer">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#goNewProducer" text="New" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Silo">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+          </items>
+        </Menu>
       </menus>
     </MenuBar>
       <VBox>

@@ -39,6 +39,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -46,12 +47,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.LoginUserController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.NewUserController">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+   <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
+            <MenuItem mnemonicParsing="false" onAction="#backToLogin" text="Back to Login" />
+            <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit" />
           </items>
         </Menu>
@@ -63,28 +66,30 @@
         </Menu>
       </menus>
     </MenuBar>
-      <VBox VBox.vgrow="ALWAYS">
+      <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
-            <Label alignment="CENTER" text="Silobyte">
+            <Label text="New User ">
                <font>
-                  <Font size="45.0" />
+                  <Font name="Arial" size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="25.0" left="15.0" top="5.0" />
+                  <Insets bottom="25.0" left="15.0" top="10.0" />
                </VBox.margin>
             </Label>
             <GridPane>
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="176.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="464.0" minWidth="10.0" prefWidth="464.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="188.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="452.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Login">
+                  <Label text="Name">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
@@ -92,39 +97,57 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tfLogin" GridPane.columnIndex="1">
+                  <Label text="Login" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
                      <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <Label text="Password" GridPane.rowIndex="1">
-                     <padding>
                         <Insets left="15.0" />
-                     </padding>
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Password" GridPane.rowIndex="2">
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
                   </Label>
-                  <TextField fx:id="tfPassword" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="tfName" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="tfLogin" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="tfPassword" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin></TextField>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <buttons>
+                      <Button fx:id="btClear" mnemonicParsing="false" onAction="#onBtClear" text="Clear" />
+                        <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSave" text="Save" />
+                    </buttons>
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
-                  </TextField>
-                  <Label fx:id="lbErrorMensage" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
+                  </ButtonBar>
+                  <Label fx:id="lbUserVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <ButtonBar prefHeight="40.0" prefWidth="200.0">
-              <buttons>
-                <Button fx:id="btLogin" mnemonicParsing="false" onAction="#onBtLogin" text="Login" />
-              </buttons>
+            <Label fx:id="lbSaveNewUser" textFill="#00a634">
+               <font>
+                  <Font size="15.0" />
+               </font>
                <VBox.margin>
-                  <Insets right="15.0" />
+                  <Insets />
                </VBox.margin>
-            </ButtonBar>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
          </children>
       </VBox>
   </children>

@@ -67,21 +67,12 @@ public class UserServices {
 
     public static boolean update(User user, User updatedUser){
         ArrayList<User> nowList = listReader();
-        System.out.println("updatedUser -> name: "+updatedUser.getName()+
-                " login: "+updatedUser.getLogin() +
-                " password: "+updatedUser.getPassword());
         for(User auxUser: nowList){
             if(auxUser.getLogin().equals(user.getLogin()) && auxUser.getPassword().equals(user.getPassword())){
                 auxUser.setName(updatedUser.getName());
                 auxUser.setLogin(updatedUser.getLogin());
                 auxUser.setPassword(updatedUser.getPassword());
             }
-        }
-
-        for(User auxUser: nowList){
-            System.out.println("name: "+auxUser.getName()+
-                " login: "+auxUser.getLogin() +
-                " password: "+auxUser.getPassword());
         }
 
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
