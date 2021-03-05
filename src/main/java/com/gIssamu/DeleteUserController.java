@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import com.gIssamu.model.User;
+import com.gIssamu.util.DataType;
 import com.gIssamu.util.UserServices;
 
 import javafx.collections.FXCollections;
@@ -55,7 +56,7 @@ public class DeleteUserController extends MenuBarController implements Initializ
     }
 
     public void setListUsersView() {
-        ArrayList<User> auxUserList = UserServices.listReader();
+        ArrayList<User> auxUserList = UserServices.listReader(DataType.USER);
 
         obsUsersList = FXCollections.observableArrayList(auxUserList);
 

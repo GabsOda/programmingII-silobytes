@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import com.gIssamu.model.User;
+import com.gIssamu.util.DataType;
 import com.gIssamu.util.UserServices;
 
 import javafx.collections.FXCollections;
@@ -65,7 +66,7 @@ public class UpdateUserController extends MenuBarController implements Initializ
     }
 
     public void loadUsersFromComboBox(){
-        List<User> auxUsers = UserServices.listReader();
+        List<User> auxUsers = UserServices.listReader(DataType.USER);
 
         obsListUsers = FXCollections.observableArrayList(auxUsers);
         cbUserBox.setItems(obsListUsers);

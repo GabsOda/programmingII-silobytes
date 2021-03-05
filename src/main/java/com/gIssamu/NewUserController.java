@@ -1,6 +1,7 @@
 package com.gIssamu;
 
 import com.gIssamu.model.User;
+import com.gIssamu.util.DataType;
 import com.gIssamu.util.UserServices;
 
 import javafx.fxml.FXML;
@@ -46,7 +47,7 @@ public class NewUserController extends MenuBarController{
                 newUser.setLogin(tfLogin.getText());
                 newUser.setPassword(tfPassword.getText());
 
-                UserServices.insert(newUser);
+                UserServices.insert(DataType.USER, newUser);
                 lbSaveNewUser.setText("New user has been saved!");
                 onBtClear();
             }
