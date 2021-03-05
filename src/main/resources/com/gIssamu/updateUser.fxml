@@ -71,6 +71,7 @@
             <Menu mnemonicParsing="false" text="Producer">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#goNewProducer" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#goListProducer" text="List" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Silo">

@@ -55,4 +55,9 @@ public class MenuBarController {
     public void goNewProducer() throws IOException{
         App.setRoot("newProducer");
     }
+
+    @FXML
+    public void goListProducer() throws IOException{
+        App.setRoot("listProducer");
+    }
 }

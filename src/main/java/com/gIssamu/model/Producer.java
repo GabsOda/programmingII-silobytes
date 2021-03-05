@@ -9,6 +9,9 @@ public class Producer implements Serializable {
     private String cpf; 
     private String phone;
 
+    public Producer(){
+    }
+
     public Producer(String name, String cpf, String phone) {
         this.name = name;
         this.cpf = cpf;
@@ -37,5 +40,10 @@ public class Producer implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString(){
+        return ""+name;
     }
 }

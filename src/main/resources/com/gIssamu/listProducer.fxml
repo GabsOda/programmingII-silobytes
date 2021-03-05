@@ -46,7 +46,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.ListUsersController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.ListProducerController">
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -83,7 +83,7 @@
         <items>
             <VBox>
                <children>
-                  <Label text="Users" textFill="#9f9f9f">
+                  <Label text="Producer" textFill="#9f9f9f">
                      <VBox.margin>
                         <Insets bottom="10.0" left="5.0" top="5.0" />
                      </VBox.margin>
@@ -91,7 +91,7 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <ListView fx:id="lvListUsers" onMouseClicked="#onClicklvListUsersItem" />
+                  <ListView fx:id="lvListProducer" onMouseClicked="#onClickLvListProducersItem" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
@@ -127,7 +127,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="lbLogin">
+                        <Label fx:id="lbCpf">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
@@ -135,7 +135,7 @@
                               <Font size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbPassword" GridPane.rowIndex="1">
+                        <Label fx:id="lbPhone" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
@@ -143,12 +143,12 @@
                               <Font size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbLoginField" GridPane.columnIndex="1">
+                        <Label fx:id="lbCpfField" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="lbPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label fx:id="lbPhoneField" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>

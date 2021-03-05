@@ -38,4 +38,14 @@ public class ProducerServices extends Services {
             return false; 
         }
     }
+
+    public static boolean producerCpfVerification(String cpfUser){
+        ArrayList<Producer> list = listReader(DataType.PRODUCER);
+        for(Producer producer : list){
+            if(producer.getCpf().equals(cpfUser)){
+                return true; 
+            }
+        }
+        return false;
+    }
 }
