@@ -70,7 +70,9 @@
          <Menu mnemonicParsing="false" text="Producer">
             <items>
                <MenuItem mnemonicParsing="false" onAction="#goNewProducer" text="New" />
+               <MenuItem mnemonicParsing="false" onAction="#goUpdateProducer" text="Update" />
                <MenuItem mnemonicParsing="false" onAction="#goListProducer" text="List" />
+               <MenuItem mnemonicParsing="false" onAction="#goDeleteProducer" text="Delete" />
             </items>
          </Menu>
          <Menu mnemonicParsing="false" text="Silo">
@@ -82,7 +84,7 @@
     </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
-            <Label text="New User ">
+            <Label text="New Producer">
                <font>
                   <Font name="Arial" size="25.0" />
                </font>

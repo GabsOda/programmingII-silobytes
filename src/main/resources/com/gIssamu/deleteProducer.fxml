@@ -45,7 +45,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.DeleteUserController">
+<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.DeleteProducerController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -82,7 +82,7 @@
     </MenuBar>
       <BorderPane prefHeight="341.0" prefWidth="659.0">
          <top>
-            <Label fx:id="lbTittle" text="Delete Users" BorderPane.alignment="CENTER">
+            <Label fx:id="lbTittle" text="Delete Producer" BorderPane.alignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>
@@ -96,7 +96,7 @@
             </ButtonBar>
          </bottom>
          <center>
-            <ListView fx:id="lvUsersList" onMouseClicked="#onClicklvUsersListItem" BorderPane.alignment="CENTER" />
+            <ListView fx:id="lvProducerList" onMouseClicked="#onClickLvProducerItem" BorderPane.alignment="CENTER" />
          </center>
          <right>
             <AnchorPane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
@@ -105,17 +105,17 @@
                      <font>
                         <Font size="15.0" />
                      </font></Label>
-                  <Label fx:id="lbPassword" layoutX="27.0" layoutY="98.0">
+                  <Label fx:id="lbCpf" layoutX="27.0" layoutY="65.0">
                      <font>
                         <Font size="15.0" />
                      </font></Label>
-                  <Label fx:id="lbLogin" layoutX="27.0" layoutY="65.0">
+                  <Label fx:id="lbPhone" layoutX="27.0" layoutY="98.0">
                      <font>
                         <Font size="15.0" />
                      </font></Label>
                   <Label fx:id="lbNameField" layoutX="122.0" layoutY="31.0" />
-                  <Label fx:id="lbLoginField" layoutX="122.0" layoutY="65.0" />
-                  <Label fx:id="lbPasswordField" layoutX="122.0" layoutY="98.0" />
+                  <Label fx:id="lbCpfField" layoutX="122.0" layoutY="65.0" />
+                  <Label fx:id="lbPhoneField" layoutX="122.0" layoutY="98.0" />
                </children>
             </AnchorPane>
          </right>

@@ -48,7 +48,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.UpdateUserController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.UpdateProducerController">
   <children>
       <MenuBar VBox.vgrow="NEVER">
          <menus>
@@ -85,7 +85,7 @@
       </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
-            <Label text="Update User">
+            <Label text="Update Producer">
                <font>
                   <Font size="25.0" />
                </font>
@@ -93,7 +93,7 @@
                   <Insets bottom="10.0" left="10.0" top="10.0" />
                </padding>
             </Label>
-            <ComboBox fx:id="cbUserBox" onAction="#onSelectItemOnComboBox" promptText="User">
+            <ComboBox fx:id="cbProducerBox" onAction="#onSelectItemOnComboBox" promptText="Producer">
                <VBox.margin>
                   <Insets bottom="10.0" left="15.0" />
                </VBox.margin></ComboBox>
@@ -116,14 +116,14 @@
                      <font>
                         <Font size="15.0" />
                      </font></Label>
-                  <Label fx:id="lbLogin" text="Login" GridPane.rowIndex="1">
+                  <Label fx:id="lbCpf" text="CPF" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
                      <font>
                         <Font size="15.0" />
                      </font></Label>
-                  <Label fx:id="lbPassword" text="Password" GridPane.rowIndex="2">
+                  <Label fx:id="lbPhone" text="Phone" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
@@ -131,8 +131,8 @@
                         <Font size="15.0" />
                      </font></Label>
                   <TextField fx:id="tfNameField" GridPane.columnIndex="1" />
-                  <TextField fx:id="tfLoginField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="tfPasswordField" prefHeight="25.0" prefWidth="319.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="tfCpfField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfPhoneField" prefHeight="25.0" prefWidth="319.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
                <VBox.margin>
                   <Insets left="5.0" right="10.0" />
