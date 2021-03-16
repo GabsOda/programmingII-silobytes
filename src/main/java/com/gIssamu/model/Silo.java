@@ -5,20 +5,23 @@ import java.io.Serializable;
 public class Silo implements Serializable{
     private static final long serialVersionUID = 1L;
     
-    public Integer number;
+    public String name;
     public Double capacity;
 
-    public Silo(Integer number, Double capacity) {
-        this.number = number;
+    public Silo(){
+    }
+
+    public Silo(String name, Double capacity) {
+        this.name = name;
         this.capacity = capacity;
     }
 
-    public Integer getNumber() {
-        return number;
+    public String getName() {
+        return name;
     }
 
-    public void setNumber(Integer number) {
-        this.number = number;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getCapacity() {
@@ -27,5 +30,10 @@ public class Silo implements Serializable{
 
     public void setCapacity(Double capacity) {
         this.capacity = capacity;
+    }
+
+    @Override
+    public String toString(){
+        return name; 
     }
 }

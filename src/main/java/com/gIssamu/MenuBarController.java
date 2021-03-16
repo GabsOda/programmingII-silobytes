@@ -70,4 +70,14 @@ public class MenuBarController {
     public void goUpdateProducer() throws IOException{
         App.setRoot("updateProducer");
     }
+
+    @FXML
+    public void goNewSilo() throws IOException{
+        App.setRoot("newSilo");
+    }
+
+    @FXML
+    public void goListSilo() throws IOException{
+        App.setRoot("listSilo");
+    }
 }

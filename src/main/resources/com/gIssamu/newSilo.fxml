@@ -40,6 +40,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -47,7 +48,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.NewProducerController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gIssamu.NewSiloController">
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -85,7 +86,7 @@
     </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
-            <Label text="New Producer">
+            <Label text="New Silo">
                <font>
                   <Font name="Arial" size="25.0" />
                </font>
@@ -93,28 +94,30 @@
                   <Insets bottom="25.0" left="15.0" top="10.0" />
                </VBox.margin>
             </Label>
+            <Label fx:id="lbSaveNewSilo" textFill="#00a634">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
             <GridPane>
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="188.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="452.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="178.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="462.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label text="Name">
-                     <GridPane.margin>
-                        <Insets left="15.0" />
-                     </GridPane.margin>
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <Label text="CPF" GridPane.rowIndex="1">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -122,7 +125,7 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Phone" GridPane.rowIndex="2">
+                  <Label text="Capacity" GridPane.rowIndex="1">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -134,15 +137,7 @@
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin></TextField>
-                  <TextField fx:id="tfCpf" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin></TextField>
-                  <TextField fx:id="tfPhone" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin></TextField>
-                  <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <buttons>
                       <Button fx:id="btClear" mnemonicParsing="false" onAction="#onBtClear" text="Clear" />
                         <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSave" text="Save" />
@@ -151,20 +146,22 @@
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ButtonBar>
-                  <Label fx:id="lbCpfVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="lbNumberVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Slider fx:id="sCapacity" majorTickUnit="10.0" max="40.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="13.0" top="5.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Label text="*in ton" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Label>
                </children>
             </GridPane>
-            <Label fx:id="lbSaveNewProducer" textFill="#00a634">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </Label>
          </children>
       </VBox>
   </children>

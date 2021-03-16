@@ -48,7 +48,7 @@ public class NewProducerController extends MenuBarController{
                 newProducer.setPhone(tfPhone.getText());
 
                 ProducerServices.insert(DataType.PRODUCER, newProducer);
-                lbSaveNewProducer.setText("New producer  has been saved!");
+                lbSaveNewProducer.setText("New producer has been saved!");
                 onBtClear();
             }
         }

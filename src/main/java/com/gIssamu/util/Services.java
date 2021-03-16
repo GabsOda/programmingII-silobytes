@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Services {
     private static String filePathUsers = "silobyte\\file\\users.dat";
     private static String filePathProducers = "silobyte\\file\\producers.dat";
+    private static String filePathSilos = "silobyte\\file\\silos.dat";
 
     public static String getFilePathUsers() {
         return filePathUsers;
@@ -19,6 +20,10 @@ public class Services {
 
     public static String getFilePathProducers(){
         return filePathProducers;
+    }
+
+    public static String getFilePathSilos(){
+        return filePathSilos;
     }
 
     public static <T> void insert(DataType type, T data){
@@ -58,6 +63,8 @@ public class Services {
             return filePathUsers;
         }else if(type == DataType.PRODUCER){
             return filePathProducers;
+        }else if(type == DataType.SILO){
+            return filePathSilos;
         }
         return null; 
     }

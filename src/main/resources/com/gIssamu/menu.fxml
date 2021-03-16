@@ -70,7 +70,10 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Silo">
           <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" onAction="#goNewSilo" text="New" />
+            <MenuItem mnemonicParsing="false" onAction="#goListSilo" text="List" />
+            <MenuItem mnemonicParsing="false" text="Update" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
           </items>
         </Menu>
       </menus>
