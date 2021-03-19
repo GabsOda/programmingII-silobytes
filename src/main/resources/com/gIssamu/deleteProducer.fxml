@@ -77,6 +77,8 @@
             <items>
                <MenuItem mnemonicParsing="false" onAction="#goNewSilo" text="New" />
                <MenuItem mnemonicParsing="false" onAction="#goListSilo" text="List" />
+               <MenuItem mnemonicParsing="false" onAction="#goUpdateSilo" text="Update" />
+               <MenuItem mnemonicParsing="false" onAction="#goDeleteSilo" text="Delete" />
             </items>
          </Menu>
       </menus>

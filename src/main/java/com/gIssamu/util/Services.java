@@ -13,6 +13,7 @@ public class Services {
     private static String filePathUsers = "silobyte\\file\\users.dat";
     private static String filePathProducers = "silobyte\\file\\producers.dat";
     private static String filePathSilos = "silobyte\\file\\silos.dat";
+    private static String filePathRent = "silobyte\\file\\rents.dat";
 
     public static String getFilePathUsers() {
         return filePathUsers;
@@ -65,6 +66,8 @@ public class Services {
             return filePathProducers;
         }else if(type == DataType.SILO){
             return filePathSilos;
+        }else if(type == DataType.RENT){
+            return filePathRent; 
         }
         return null; 
     }

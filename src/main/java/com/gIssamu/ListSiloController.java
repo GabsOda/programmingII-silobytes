@@ -4,9 +4,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import com.gIssamu.model.Rent;
 import com.gIssamu.model.Silo;
 import com.gIssamu.util.DataType;
 import com.gIssamu.util.ProducerServices;
+import com.gIssamu.util.RentServices;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -34,6 +36,11 @@ public class ListSiloController extends MenuBarController implements Initializab
     @FXML
     private Label lbCapacityField; 
 
+    @FXML
+    private ListView<Rent> lvListRent; 
+
+    private ObservableList<Rent> obsListRent; 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setListSiloView();
@@ -55,7 +62,23 @@ public class ListSiloController extends MenuBarController implements Initializab
 
         lbNameField.setText(silo.getName());
         
-        lbCapacity.setText("Capacity: ");
+        lbCapacity.setText("Capacity ");
         lbCapacityField.setText(silo.getCapacity().toString());
+
+        setRentListSilo(silo);
+    }
+
+    private void setRentListSilo(Silo silo){
+        ArrayList<Rent> auxRentList = RentServices.listReader(DataType.RENT);
+        ArrayList<Rent> auxRentListSilo = new ArrayList<>(); 
+
+        for(Rent rent : auxRentList){
+            if(rent.getSilo().equals(silo)){
+                auxRentList.add(rent);
+            }
+        }
+
+        obsListRent = FXCollections.observableArrayList(auxRentListSilo);
+        lvListRent.setItems(obsListRent);
     }
 }

@@ -80,6 +80,8 @@
             <items>
                <MenuItem mnemonicParsing="false" onAction="#goNewSilo" text="New" />
                <MenuItem mnemonicParsing="false" onAction="#goListSilo" text="List" /> 
+               <MenuItem mnemonicParsing="false" onAction="#goUpdateSilo" text="Update" />
+               <MenuItem mnemonicParsing="false" onAction="#goDeleteSilo" text="Delete" />
             </items>
          </Menu>
       </menus>
@@ -147,7 +149,7 @@
                      </GridPane.margin>
                   </ButtonBar>
                   <Label fx:id="lbNumberVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Slider fx:id="sCapacity" majorTickUnit="10.0" max="40.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Slider fx:id="sCapacity" majorTickUnit="10.0" max="40.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="13.0" top="5.0" />
                      </GridPane.margin>

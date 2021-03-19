@@ -54,7 +54,5 @@ public class NewSiloController extends MenuBarController{
     public void onBtClear(){
         tfName.setText("");
         sCapacity.setValue(0.0);
-
-        lbSaveNewSilo.setText("");
     }
 }

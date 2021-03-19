@@ -1,12 +1,15 @@
 package com.gIssamu.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Silo implements Serializable{
     private static final long serialVersionUID = 1L;
     
     public String name;
     public Double capacity;
+
+    private ArrayList<Rent> rentList; 
 
     public Silo(){
     }
@@ -30,6 +33,14 @@ public class Silo implements Serializable{
 
     public void setCapacity(Double capacity) {
         this.capacity = capacity;
+    }
+
+    public void addRentOnSilo(Rent rent){
+        rentList.add(rent);
+    }
+
+    public ArrayList<Rent> getRentList(){
+        return rentList;
     }
 
     @Override

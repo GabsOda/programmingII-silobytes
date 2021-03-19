@@ -80,4 +80,14 @@ public class MenuBarController {
     public void goListSilo() throws IOException{
         App.setRoot("listSilo");
     }
+
+    @FXML
+    public void goUpdateSilo() throws IOException{
+        App.setRoot("updateSilo");
+    }
+
+    @FXML
+    public void goDeleteSilo() throws IOException{
+        App.setRoot("deleteSilo");
+    }
 }
