@@ -81,6 +81,12 @@
                <MenuItem mnemonicParsing="false" onAction="#goDeleteSilo" text="Delete" />
             </items>
          </Menu>
+         <Menu mnemonicParsing="false" text="Rent">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#goNewRent" text="New" />
+               <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
+            </items>
+         </Menu>        
       </menus>
     </MenuBar>
       <BorderPane prefHeight="341.0" prefWidth="659.0">

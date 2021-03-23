@@ -41,6 +41,7 @@ public class NewSiloController extends MenuBarController{
                 Silo newSilo = new Silo(); 
                 newSilo.setName(tfName.getText());
                 newSilo.setCapacity(sCapacity.getValue());
+                newSilo.setCapacityEmpty(sCapacity.getValue());
 
                 SiloServices.insert(DataType.SILO, newSilo);
                 lbSaveNewSilo.setText("New silo has been saved!");

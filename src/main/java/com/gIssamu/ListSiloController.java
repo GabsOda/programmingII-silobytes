@@ -8,7 +8,6 @@ import com.gIssamu.model.Rent;
 import com.gIssamu.model.Silo;
 import com.gIssamu.util.DataType;
 import com.gIssamu.util.ProducerServices;
-import com.gIssamu.util.RentServices;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -69,16 +68,7 @@ public class ListSiloController extends MenuBarController implements Initializab
     }
 
     private void setRentListSilo(Silo silo){
-        ArrayList<Rent> auxRentList = RentServices.listReader(DataType.RENT);
-        ArrayList<Rent> auxRentListSilo = new ArrayList<>(); 
-
-        for(Rent rent : auxRentList){
-            if(rent.getSilo().equals(silo)){
-                auxRentList.add(rent);
-            }
-        }
-
-        obsListRent = FXCollections.observableArrayList(auxRentListSilo);
+        obsListRent = FXCollections.observableArrayList(silo.getRentList());
         lvListRent.setItems(obsListRent);
     }
 }

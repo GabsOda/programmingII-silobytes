@@ -3,20 +3,24 @@ package com.gIssamu.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.gIssamu.util.PaymentConfirmation;
+
 public class Rent implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Double quantity; 
-    private Date time;
+    private Date date;
 
     private Producer producer;
     private Silo silo; 
+    private PaymentConfirmation paymentConfirmation; 
 
-    public Rent(Double quantity, Date time, Producer producer, Silo silo) {
+    public Rent(Double quantity, Date date, Producer producer, Silo silo) {
         this.quantity = quantity;
-        this.time = time;
+        this.date = date;
         this.producer = producer;
         this.silo = silo; 
+        this.paymentConfirmation = null; 
     }
 
     public Double getQuantity() {
@@ -27,12 +31,12 @@ public class Rent implements Serializable {
         this.quantity = quantity;
     }
 
-    public Date getTime() {
-        return time;
+    public Date getDate() {
+        return date;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Producer getProducer() {
@@ -49,6 +53,14 @@ public class Rent implements Serializable {
 
     public void setSilo(Silo silo) {
         this.silo = silo;
+    }
+
+    public PaymentConfirmation getPaymentConfirmation() {
+        return paymentConfirmation;
+    }
+
+    public void setPaymentConfirmation(PaymentConfirmation paymentConfirmation) {
+        this.paymentConfirmation = paymentConfirmation;
     }
 
     @Override

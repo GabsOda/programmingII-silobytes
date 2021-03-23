@@ -82,6 +82,12 @@
                <MenuItem mnemonicParsing="false" onAction="#goDeleteSilo" text="Delete" />
             </items>
          </Menu>
+         <Menu mnemonicParsing="false" text="Rent">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#goNewRent" text="New" />
+               <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
+            </items>
+         </Menu>
       </menus>
     </MenuBar>
       <SplitPane dividerPositions="0.29780564263322884" prefHeight="376.0" prefWidth="640.0">

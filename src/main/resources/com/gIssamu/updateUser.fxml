@@ -84,6 +84,12 @@
                   <MenuItem mnemonicParsing="false" onAction="#goDeleteSilo" text="Delete" />
                </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Rent">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goNewRent" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
+               </items>
+            </Menu>
          </menus>
       </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">

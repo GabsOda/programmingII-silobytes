@@ -2,16 +2,12 @@ package com.gIssamu.model;
 
 import java.io.Serializable;
 
-import com.gIssamu.util.LoginConfirmation;
-
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
      
     private String name; 
     private String login;
     private String password;
-
-    private LoginConfirmation loginConfirm; 
 
     public User() {
 	}
@@ -44,14 +40,6 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-    
-    public LoginConfirmation getLoginConfirm() {
-        return loginConfirm;
-    }
-
-    public void setLoginConfirm(LoginConfirmation loginConfirm) {
-        this.loginConfirm = loginConfirm;
     }
 
     @Override

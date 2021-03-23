@@ -90,4 +90,14 @@ public class MenuBarController {
     public void goDeleteSilo() throws IOException{
         App.setRoot("deleteSilo");
     }
+
+    @FXML
+    public void goListRent() throws IOException{
+        App.setRoot("listRent");
+    }
+
+    @FXML
+    public void goNewRent() throws IOException{
+        App.setRoot("newRent");
+    }
 }

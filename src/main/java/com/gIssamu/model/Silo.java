@@ -9,6 +9,8 @@ public class Silo implements Serializable{
     public String name;
     public Double capacity;
 
+    public Double capacityEmpty; 
+
     private ArrayList<Rent> rentList; 
 
     public Silo(){
@@ -17,6 +19,7 @@ public class Silo implements Serializable{
     public Silo(String name, Double capacity) {
         this.name = name;
         this.capacity = capacity;
+        capacityEmpty = capacity; 
     }
 
     public String getName() {
@@ -41,6 +44,18 @@ public class Silo implements Serializable{
 
     public ArrayList<Rent> getRentList(){
         return rentList;
+    }
+
+    public Double getCapacityEmpty() {
+        return capacityEmpty;
+    }
+
+    public void setCapacityEmpty(Double capacityEmpty) {
+        this.capacityEmpty = capacityEmpty;
+    }
+
+    public void calculateCapacityEmpty(Double capacity, Double capacityEmpty){
+        capacityEmpty -= capacity; 
     }
 
     @Override
