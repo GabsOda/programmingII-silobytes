@@ -1,7 +1,7 @@
-module com.gIssamu {
+module issamu {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens com.gIssamu to javafx.fxml;
-    exports com.gIssamu;
+    opens issamu to javafx.fxml;
+    exports issamu;
 }
