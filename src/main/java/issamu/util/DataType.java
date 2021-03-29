@@ -4,5 +4,6 @@ public enum DataType {
     USER,
     PRODUCER, 
     SILO, 
-    RENT, 
+    RENT,
+    WITHDRAW; 
 }

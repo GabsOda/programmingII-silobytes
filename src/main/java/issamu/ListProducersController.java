@@ -54,7 +54,7 @@ public class ListProducersController extends MenuBarController implements Initia
 
     @FXML
     public void onActionBtUpdateProducer() throws IOException {
-        
+        App.setRoot("updateProducer");
     }
 
     @FXML

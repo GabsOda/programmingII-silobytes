@@ -17,7 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 
-public class ListRents extends MenuBarController implements Initializable{
+public class ListRentsController extends MenuBarController implements Initializable{
     
     @FXML
     private ListView<Rent> lvRent;  
@@ -56,11 +56,6 @@ public class ListRents extends MenuBarController implements Initializable{
             RentServices.delete(lvRent.getSelectionModel().getSelectedItem());
             App.setRoot("listRents");
         }
-    }
-
-    @FXML
-    public void onBtWithdrawl(){
-
     }
 
     @FXML

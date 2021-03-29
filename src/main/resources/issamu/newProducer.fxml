@@ -51,7 +51,7 @@
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
-         <Menu mnemonicParsing="false" text="File">
+         <Menu mnemonicParsing="false" text="Back">
             <items>
                <MenuItem mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
                <SeparatorMenuItem mnemonicParsing="false" />
@@ -86,16 +86,31 @@
                <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
             </items>
          </Menu>
+         <Menu mnemonicParsing="false" text="Withdraw">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#goNewWithdraw" text="New" />
+               <MenuItem mnemonicParsing="false" onAction="#goListWithdraw" text="List" />
+               <MenuItem mnemonicParsing="false" onAction="#goUpdateWithdraw" text="Update" />
+            </items>
+        </Menu>
       </menus>
     </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
             <Label text="New Producer">
                <font>
-                  <Font name="Arial" size="25.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="25.0" left="15.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lbSaveNewProducer" textFill="#00a634">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="15.0" />
                </VBox.margin>
             </Label>
             <GridPane>
@@ -137,15 +152,15 @@
                   </Label>
                   <TextField fx:id="tfName" GridPane.columnIndex="1">
                      <GridPane.margin>
-                        <Insets right="15.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin></TextField>
                   <TextField fx:id="tfCpf" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
-                        <Insets right="15.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin></TextField>
                   <TextField fx:id="tfPhone" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
-                        <Insets right="15.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin></TextField>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <buttons>
@@ -156,20 +171,12 @@
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ButtonBar>
-                  <Label fx:id="lbCpfVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="lbCpfVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                </children>
             </GridPane>
-            <Label fx:id="lbSaveNewProducer" textFill="#00a634">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </Label>
          </children>
       </VBox>
   </children>

@@ -53,7 +53,7 @@
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="Back">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -88,13 +88,20 @@
             <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
           </items>
         </Menu>
+        <Menu mnemonicParsing="false" text="Withdraw">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#goNewWithdraw" text="New" />
+            <MenuItem mnemonicParsing="false" onAction="#goListWithdraw" text="List" />
+            <MenuItem mnemonicParsing="false" onAction="#goUpdateWithdraw" text="Update" />
+          </items>
+        </Menu>
       </menus>
     </MenuBar>
       <VBox>
          <children>
             <Label text="Silos">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="5.0" left="10.0" top="10.0" />
@@ -109,7 +116,7 @@
             </ToolBar>
             <HBox>
                <children>
-                  <ListView fx:id="lvSilos" onMouseClicked="#onClickItemLvSilos" prefHeight="400.0" prefWidth="200.0" />
+                  <ListView fx:id="lvSilos" onMouseClicked="#onClickItemLvSilos" />
                   <VBox fx:id="vbDetailSilo">
                      <children>
                         <GridPane alignment="CENTER" prefHeight="300.0" prefWidth="400.0">

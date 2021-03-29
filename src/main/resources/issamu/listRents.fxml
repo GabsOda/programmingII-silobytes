@@ -44,11 +44,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="issamu.ListRents">
+<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="issamu.ListRentsController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="Back">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -83,13 +83,20 @@
             <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
           </items>
         </Menu>
+        <Menu mnemonicParsing="false" text="Withdraw">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#goNewWithdraw" text="New" />
+            <MenuItem mnemonicParsing="false" onAction="#goListWithdraw" text="List" />
+            <MenuItem mnemonicParsing="false" onAction="#goUpdateWithdraw" text="Update" />
+          </items>
+        </Menu>
       </menus>
     </MenuBar>
       <VBox>
          <children>
-            <Label text="Rents List">
+            <Label text="Rents">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="5.0" left="10.0" top="10.0" />
@@ -101,7 +108,6 @@
                </VBox.margin>
                <items>
                 <Button fx:id="btNewRent" mnemonicParsing="false" onAction="#onBtNewRent" text="New" />
-                <Button fx:id="btWithdrawl" mnemonicParsing="false" onAction="#onBtWithdrawl" text="Update" />
                   <Button fx:id="btDeleteRent" mnemonicParsing="false" onAction="#onBtDeleteRent" text="Delete" />
                </items>
             </ToolBar>

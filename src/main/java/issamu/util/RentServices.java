@@ -10,12 +10,17 @@ public class RentServices extends Services {
     public static boolean delete(Rent rent){
         ArrayList<Rent> rentsList = Services.listReader(DataType.RENT);
         for(Rent auxRent: rentsList){
-            System.out.println(auxRent);
-            if(auxRent.getDate().equals(rent.getDate()) && 
-                auxRent.getQuantity().equals(rent.getQuantity()) &&
-                auxRent.getSilo().getName().equals(rent.getSilo().getName()) &&
-                auxRent.getProducer().getCpf().equals(rent.getProducer().getCpf())
-            ){
+            if(compareRent(auxRent, rent)){
+                Silo auxSilo = auxRent.getSilo(); 
+                auxSilo.setCapacityEmpty(auxSilo.getCapacityEmpty()-rent.getQuantity());
+                Double newEmptyCapacity =  auxSilo.getCapacityEmpty()+auxRent.getQuantity();
+                Silo updatedSilo =  new Silo(auxSilo.getName(), auxSilo.getCapacity(), newEmptyCapacity);
+                SiloServices.update(
+                    auxSilo, 
+                    updatedSilo,
+                    false
+                );
+
                 rentsList.remove(auxRent);
                 break; 
             }
@@ -30,18 +35,8 @@ public class RentServices extends Services {
 
     public static boolean update(Rent rent, Rent updatedRent){
         ArrayList<Rent> rentList = Services.listReader(DataType.RENT); 
-        System.out.println("in update: ");
         for(Rent auxRent : rentList){
-            System.out.println(auxRent);
-            System.out.println("-> " + rent);
-            System.out.println("update->  "+updatedRent);
-        
-            if(auxRent.getDate().equals(rent.getDate()) &&
-                auxRent.getQuantity().equals(rent.getQuantity()) &&
-                auxRent.getSilo().getName().equals(rent.getSilo().getName()) &&
-                auxRent.getProducer().getCpf().equals(rent.getProducer().getCpf())
-            ){ 
-                System.out.println("aqui entrou!");
+            if(compareRent(auxRent, rent)){ 
                 auxRent.setDate(updatedRent.getDate());
                 auxRent.setQuantity(updatedRent.getQuantity());
                 auxRent.setSilo(updatedRent.getSilo());
@@ -50,6 +45,18 @@ public class RentServices extends Services {
         }
 
         if(writeInFile(rentList, DataType.RENT)){
+            return true; 
+        }else {
+            return false; 
+        }
+    }
+
+    public static boolean compareRent(Rent auxRent, Rent rent){
+        if(auxRent.getDate().equals(rent.getDate()) &&
+            auxRent.getQuantity().equals(rent.getQuantity()) &&
+            auxRent.getSilo().getName().equals(rent.getSilo().getName()) &&
+            auxRent.getProducer().getCpf().equals(rent.getProducer().getCpf())
+        ){ 
             return true; 
         }else {
             return false; 

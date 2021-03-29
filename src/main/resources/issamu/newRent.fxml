@@ -53,7 +53,7 @@
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="Back">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -88,16 +88,28 @@
                <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
             </items>
          </Menu>
+         <Menu mnemonicParsing="false" text="Withdraw">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#goNewWithdraw" text="New" />
+               <MenuItem mnemonicParsing="false" onAction="#goListWithdraw" text="List" />
+               <MenuItem mnemonicParsing="false" onAction="#goUpdateWithdraw" text="Update" />
+            </items>
+        </Menu>
       </menus>
     </MenuBar>
       <VBox>
          <children>
             <Label fx:id="lbMenuName" text="New Rent">
                <font>
-                  <Font size="30.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label textFill="#00a634">
+               <VBox.margin>
+                  <Insets left="15.0" />
                </VBox.margin>
             </Label>
             <GridPane prefHeight="202.0" prefWidth="640.0">
@@ -155,6 +167,11 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </ComboBox>
+                  <Label fx:id="lbQuantityEmpty" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="150.0" />
+                     </GridPane.margin>
+                  </Label>
                   <TextField fx:id="tfQuantity" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" right="50.0" />
@@ -165,12 +182,10 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </DatePicker>
-                  <Label fx:id="lbErrorMensage" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Label fx:id="lbQuantityEmpty" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="150.0" />
-                     </GridPane.margin>
-                  </Label>
+                  <Label fx:id="lbErrorMensage" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                </children>
             </GridPane>
          </children>

@@ -52,7 +52,7 @@
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
-         <Menu mnemonicParsing="false" text="File">
+         <Menu mnemonicParsing="false" text="Back">
             <items>
                <MenuItem mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
                <SeparatorMenuItem mnemonicParsing="false" />
@@ -87,16 +87,23 @@
                <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
             </items>
          </Menu>
+         <Menu mnemonicParsing="false" text="Withdraw">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#goNewWithdraw" text="New" />
+               <MenuItem mnemonicParsing="false" onAction="#goListWithdraw" text="List" />
+               <MenuItem mnemonicParsing="false" onAction="#goUpdateWithdraw" text="Update" />
+            </items>
+        </Menu>
       </menus>
     </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
             <Label text="New Silo">
                <font>
-                  <Font name="Arial" size="25.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="25.0" left="15.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" top="10.0" />
                </VBox.margin>
             </Label>
             <Label fx:id="lbSaveNewSilo" textFill="#00a634">
@@ -104,11 +111,8 @@
                   <Font size="15.0" />
                </font>
                <VBox.margin>
-                  <Insets />
+                  <Insets bottom="5.0" left="15.0" />
                </VBox.margin>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
             </Label>
             <GridPane>
               <columnConstraints>
@@ -130,6 +134,10 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </Label>
+                  <TextField fx:id="tfName" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin></TextField>
                   <Label text="Capacity" GridPane.rowIndex="1">
                      <font>
                         <Font size="15.0" />
@@ -138,20 +146,6 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="tfName" GridPane.columnIndex="1">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin></TextField>
-                  <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                    <buttons>
-                      <Button fx:id="btClear" mnemonicParsing="false" onAction="#onBtClear" text="Clear" />
-                        <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSave" text="Save" />
-                    </buttons>
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin>
-                  </ButtonBar>
-                  <Label fx:id="lbNumberVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Slider fx:id="sCapacity" majorTickUnit="10.0" max="40.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="13.0" top="5.0" />
@@ -165,6 +159,16 @@
                         <Insets bottom="20.0" />
                      </padding>
                   </Label>
+                  <Label fx:id="lbNumberVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <buttons>
+                      <Button fx:id="btClear" mnemonicParsing="false" onAction="#onBtClear" text="Clear" />
+                        <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSave" text="Save" />
+                    </buttons>
+                  </ButtonBar>
                </children>
             </GridPane>
          </children>

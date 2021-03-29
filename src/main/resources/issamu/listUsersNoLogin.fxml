@@ -48,7 +48,7 @@
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="Back">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#backToLogin" text="Back to Login" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -67,7 +67,7 @@
          <children>
             <Label text="Users">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="5.0" left="10.0" top="10.0" />

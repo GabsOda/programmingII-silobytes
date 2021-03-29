@@ -14,6 +14,7 @@ public class Services {
     private static String filePathProducers = "file\\producers.dat";
     private static String filePathSilos = "file\\silos.dat";
     private static String filePathRent = "file\\rents.dat";
+    private static String filePathWithdraws = "file\\withdraws.dat"; 
 
     public static String getFilePathUsers() {
         return filePathUsers;
@@ -36,7 +37,8 @@ public class Services {
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
             oos.writeObject(nowList);
         } catch (IOException io) {
-            System.out.println("Error insert user!");
+            System.out.println("Error insert data!");
+            io.printStackTrace();
         }
     }
 
@@ -68,7 +70,9 @@ public class Services {
             return filePathSilos;
         }else if(type == DataType.RENT){
             return filePathRent; 
-        }
+        }else if(type == DataType.WITHDRAW){
+            return filePathWithdraws; 
+        } 
         return null; 
     }
 

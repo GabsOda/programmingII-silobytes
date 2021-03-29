@@ -51,7 +51,7 @@
   <children>
    <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="Back">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#backToLogin" text="Back to Login" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -70,10 +70,18 @@
          <children>
             <Label text="New User ">
                <font>
-                  <Font name="Arial" size="25.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="25.0" left="15.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lbSaveNewUser" textFill="#00a634">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="15.0" />
                </VBox.margin>
             </Label>
             <GridPane>
@@ -91,7 +99,7 @@
                <children>
                   <Label text="Name">
                      <GridPane.margin>
-                        <Insets left="15.0" />
+                        <Insets left="10.0" />
                      </GridPane.margin>
                      <font>
                         <Font size="15.0" />
@@ -102,7 +110,7 @@
                         <Font size="15.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets left="15.0" />
+                        <Insets left="10.0" />
                      </GridPane.margin>
                   </Label>
                   <Label text="Password" GridPane.rowIndex="2">
@@ -110,20 +118,20 @@
                         <Font size="15.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets left="15.0" />
+                        <Insets left="10.0" />
                      </GridPane.margin>
                   </Label>
                   <TextField fx:id="tfName" GridPane.columnIndex="1">
                      <GridPane.margin>
-                        <Insets right="15.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin></TextField>
                   <TextField fx:id="tfLogin" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
-                        <Insets right="15.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin></TextField>
                   <TextField fx:id="tfPassword" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
-                        <Insets right="15.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin></TextField>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <buttons>
@@ -131,23 +139,15 @@
                         <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSave" text="Save" />
                     </buttons>
                      <GridPane.margin>
-                        <Insets right="15.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin>
                   </ButtonBar>
-                  <Label fx:id="lbUserVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="lbUserVerif" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                </children>
             </GridPane>
-            <Label fx:id="lbSaveNewUser" textFill="#00a634">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </Label>
          </children>
       </VBox>
   </children>

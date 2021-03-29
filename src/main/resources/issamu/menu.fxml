@@ -45,7 +45,7 @@
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="Back">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#backToLogin" text="Back to Login" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -79,16 +79,23 @@
             <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
           </items>
         </Menu>
+        <Menu mnemonicParsing="false" text="Withdraw">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#goNewWithdraw" text="New" />
+            <MenuItem mnemonicParsing="false" onAction="#goListWithdraw" text="List" />
+            <MenuItem mnemonicParsing="false" onAction="#goUpdateWithdraw" text="Update" />
+          </items>
+        </Menu>
       </menus>
     </MenuBar>
       <VBox>
          <children>
             <Label fx:id="lbMenuName" text="Silobytes Menu">
                <font>
-                  <Font size="30.0" />
+                  <Font size="40.0" />
                </font>
                <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" top="10.0" />
                </VBox.margin>
             </Label>
          </children>

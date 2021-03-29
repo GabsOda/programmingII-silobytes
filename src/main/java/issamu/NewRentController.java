@@ -20,6 +20,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class NewRentController extends MenuBarController implements Initializable{
+
+    @FXML
+    private Label lbSaveConfirm; 
     
     @FXML
     private ComboBox<Producer> cbProducer; 
@@ -80,6 +83,7 @@ public class NewRentController extends MenuBarController implements Initializabl
             RentServices.insert(DataType.RENT, newRent);
             SiloServices.update(auxSilo, auxUpdatedSilo, false);
 
+            lbSaveConfirm.setText("*New rent has been saved!");
         }
     }
 

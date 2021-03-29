@@ -43,16 +43,12 @@ public class SiloServices extends Services{
         }else {
             return false; 
         }
-        
-        
     }
 
     private static void updateNameOnRents(Silo silo, Silo updatedSilo) {
         ArrayList<Rent> siloRentList = RentServices.searchRentsOnSilo(silo); 
         for(Rent rent : siloRentList){
-            System.out.println("rent -> "+ rent);
             Rent updatedRent = new Rent(rent.getQuantity(), rent.getDate(), rent.getProducer(), updatedSilo);
-            System.out.println("updatedRent -> "+ updatedRent);
             RentServices.update(rent, updatedRent);
         }
     }

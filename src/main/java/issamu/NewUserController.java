@@ -34,12 +34,12 @@ public class NewUserController extends MenuBarController{
     @FXML
     public void onBtSave(){
         if(tfName.getText().isEmpty() || tfLogin.getText().isEmpty() || tfPassword.getText().isEmpty()){
-            lbUserVerif.setText("The fields cannot be empty!");
+            lbUserVerif.setText("*The fields cannot be empty!");
         }else {
             boolean verifyNewUser = UserServices.loginEqualsVerification(tfLogin.getText());
     
             if(verifyNewUser == true){
-                lbUserVerif.setText("* This login already exists!");
+                lbUserVerif.setText("*This login already exists!");
             }else{
                 User newUser = new User();
                 newUser.setName(tfName.getText());
@@ -47,7 +47,7 @@ public class NewUserController extends MenuBarController{
                 newUser.setPassword(tfPassword.getText());
 
                 UserServices.insert(DataType.USER, newUser);
-                lbSaveNewUser.setText("New user has been saved!");
+                lbSaveNewUser.setText("*New user has been saved!");
                 onBtClear();
             }
         }

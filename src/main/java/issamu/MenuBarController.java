@@ -85,4 +85,19 @@ public class MenuBarController {
     public void goListRent() throws IOException{
         App.setRoot("listRents");
     }
+
+    @FXML
+    public void goNewWithdraw() throws IOException{
+        App.setRoot("newWithdraw");
+    }
+
+    @FXML
+    public void goListWithdraw() throws IOException{
+        App.setRoot("listWithdraws");
+    }
+
+    @FXML
+    public void goUpdateWithdraw() throws IOException{
+        App.setRoot("updateWithdraw");
+    }
 }

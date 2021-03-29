@@ -52,7 +52,7 @@
   <children>
       <MenuBar VBox.vgrow="NEVER">
          <menus>
-            <Menu mnemonicParsing="false" text="File">
+            <Menu mnemonicParsing="false" text="Back">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
                   <SeparatorMenuItem mnemonicParsing="false" />
@@ -87,13 +87,20 @@
                   <MenuItem mnemonicParsing="false" onAction="#goListRent" text="List" />
                </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Withdraw">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goNewWithdraw" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#goListWithdraw" text="List" />
+                  <MenuItem mnemonicParsing="false" onAction="#goUpdateWithdraw" text="Update" />
+               </items>
+            </Menu>
          </menus>
       </MenuBar>
       <VBox prefHeight="377.0" prefWidth="640.0">
          <children>
             <Label text="Update Silo">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="5.0" left="10.0" top="10.0" />
@@ -122,12 +129,21 @@
                   <Label text="Name">
                      <GridPane.margin>
                         <Insets />
-                     </GridPane.margin></Label>
+                     </GridPane.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <Label text="Capacity" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets />
-                     </GridPane.margin></Label>
-                  <Label text="Empty Capacity" GridPane.rowIndex="2" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Label text="Empty Capacity" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <TextField fx:id="tfName" GridPane.columnIndex="1" />
                   <TextField fx:id="tfCapacity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="tfCapacityEmpty" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -138,13 +154,19 @@
             </GridPane>
             <Label fx:id="lbSucessUpdate" textFill="#00a634">
                <VBox.margin>
-                  <Insets left="5.0" />
+                  <Insets left="15.0" top="5.0" />
                </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Label>
             <Label fx:id="lbUnSucessUpdate" textFill="RED">
                <VBox.margin>
-                  <Insets left="5.0" />
+                  <Insets left="15.0" top="5.0" />
                </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Label>
          </children>
       </VBox>

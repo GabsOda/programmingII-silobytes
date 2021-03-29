@@ -44,9 +44,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="issamu.ListUsersController">
+<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="issamu.ListWithdrawsController">
   <children>
-   <MenuBar VBox.vgrow="NEVER">
+    <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="Back">
           <items>
@@ -94,7 +94,7 @@
     </MenuBar>
       <VBox>
          <children>
-            <Label text="Users">
+            <Label text="Withdraws">
                <font>
                   <Font size="25.0" />
                </font>
@@ -103,13 +103,15 @@
                </VBox.margin>
             </Label>
             <ToolBar>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <items>
-                <Button fx:id="btNewUser" mnemonicParsing="false" onAction="#onActionBtNewUser" text="New" />
-                  <Button fx:id="btUpdate" mnemonicParsing="false" onAction="#onActionBtUpdate" text="Update" />
-                  <Button fx:id="btDelete" mnemonicParsing="false" onAction="#onActionBtDelete" text="Delete" visible="false" />
+                <Button fx:id="btNewWithdraw" mnemonicParsing="false" onAction="#onActionBtNewWithdraw" text="New" />
+                <Button fx:id="btUpdateWithdraw" mnemonicParsing="false" onAction="#onActionBtUpdateWithdraw" text="Update" />
                </items>
             </ToolBar>
-            <ListView fx:id="lvUsers" onMouseClicked="#onClickItemListUsers" />
+            <ListView fx:id="lvWithdraw" />
          </children>
       </VBox>
   </children>

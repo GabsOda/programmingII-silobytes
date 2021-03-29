@@ -51,7 +51,7 @@
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="Back">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit" />
           </items>
@@ -68,10 +68,10 @@
          <children>
             <Label alignment="CENTER" text="Silobyte">
                <font>
-                  <Font size="45.0" />
+                  <Font size="40.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="25.0" left="15.0" top="5.0" />
+                  <Insets bottom="5.0" left="10.0" top="10.0" />
                </VBox.margin>
             </Label>
             <GridPane>
@@ -106,16 +106,16 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lbErrorMensage" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
                   <PasswordField fx:id="pfPassword" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </PasswordField>
+                  <Label fx:id="lbErrorMensage" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </GridPane>
             <ButtonBar prefHeight="40.0" prefWidth="200.0">

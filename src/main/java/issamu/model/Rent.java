@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import issamu.util.PaymentConfirmation;
-
 public class Rent implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -14,14 +12,12 @@ public class Rent implements Serializable {
 
     private Producer producer;
     private Silo silo; 
-    private PaymentConfirmation paymentConfirmation; 
 
     public Rent(Double quantity, LocalDate date, Producer producer, Silo silo) {
         this.quantity = quantity;
         this.date = date;
         this.producer = producer;
         this.silo = silo; 
-        this.paymentConfirmation = null; 
     }
 
     public Double getQuantity() {
@@ -54,14 +50,6 @@ public class Rent implements Serializable {
 
     public void setSilo(Silo silo) {
         this.silo = silo;
-    }
-
-    public PaymentConfirmation getPaymentConfirmation() {
-        return paymentConfirmation;
-    }
-
-    public void setPaymentConfirmation(PaymentConfirmation paymentConfirmation) {
-        this.paymentConfirmation = paymentConfirmation;
     }
 
     @Override
